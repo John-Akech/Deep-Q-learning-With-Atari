@@ -121,3 +121,8 @@ Agent successfully learned basic gameplay - Episode 2 shows ball contact and sco
 - `training_results.csv` - Detailed hyperparameter results
 - `requirements.txt` - Dependencies
 - `README.md` - This documentation
+
+## Group Memebers
+1.
+2.
+3.
