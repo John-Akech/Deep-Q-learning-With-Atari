@@ -1,5 +1,5 @@
 Config,Policy,Learning Rate,Gamma,Batch Size,Epsilon Start,Epsilon End,Epsilon Decay,Avg Reward,Training Time (s),Behavior Notes
-1,MlpPolicy,0.0001,0.99,32,1.0,0.01,0.1,0.67,490.84,"MLP struggles with visual input, poor spatial understanding"
-2,CnnPolicy,0.0001,0.99,32,1.0,0.01,0.1,0.67,542.24,CNN baseline with optimal exploration schedule
-3,CnnPolicy,0.00025,0.99,32,1.0,0.01,0.1,0.0,1445.97,Higher LR for faster convergence with CNN architecture
-4,CnnPolicy,0.0001,0.995,64,1.0,0.01,0.2,0.0,1128.69,Higher gamma + larger batch for long-term reward optimization
+1,MlpPolicy,0.0001,0.99,32,1.0,0.01,0.1,2.0,141.26,"MLP struggles with visual input, poor spatial understanding"
+2,CnnPolicy,0.0001,0.99,32,1.0,0.01,0.1,0.67,360.74,CNN baseline with optimal exploration schedule
+3,CnnPolicy,0.00025,0.99,32,1.0,0.01,0.1,0.0,363.26,Higher LR for faster convergence with CNN architecture
+4,CnnPolicy,0.0001,0.995,64,1.0,0.01,0.2,0.33,3720.25,Higher gamma + larger batch for long-term reward optimization
