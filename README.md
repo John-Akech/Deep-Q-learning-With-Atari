@@ -124,5 +124,5 @@ Agent successfully learned basic gameplay - Episode 2 shows ball contact and sco
 
 ## Group Memebers
 1.
-2.
+2. Eliane Munezero
 3.

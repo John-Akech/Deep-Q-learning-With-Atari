@@ -44,7 +44,7 @@ def train_dqn(policy_type, lr, gamma, batch_size, epsilon_start, epsilon_end, ep
     # Evaluate the model
     env_eval = create_atari_env()
     total_reward = 0
-    episodes = 3
+    episodes = 30
     for episode in range(episodes):
         obs, _ = env_eval.reset()
         episode_reward = 0
@@ -86,7 +86,7 @@ def main():
             epsilon_start=config["epsilon_start"],
             epsilon_end=config["epsilon_end"],
             epsilon_decay=config["epsilon_decay"],
-            total_timesteps=25000
+            total_timesteps=90000
         )
         # Document behavior observations
         behavior_notes = {
