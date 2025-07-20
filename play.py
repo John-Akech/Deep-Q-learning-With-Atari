@@ -34,7 +34,7 @@ def play_game():
     print("The agent will select actions with highest Q-values")
     print("Press Ctrl+C to stop\n")
     try:
-        episodes = 3
+        episodes = 15
         total_reward = 0
         for episode in range(episodes):
             obs, _ = env.reset()

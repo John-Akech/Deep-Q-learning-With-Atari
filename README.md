@@ -34,12 +34,13 @@ python play.py
 
 The following hyperparameter configurations were tested, comparing MLPPolicy vs CNNPolicy:
 
-| Hyperparameter Set | Noted Behavior | Avg Reward | Training Time |
-|-------------------|----------------|------------|---------------|
-| lr=0.0001, gamma=0.99, batch_size=32, epsilon_start=1.0, epsilon_end=0.01, epsilon_decay=0.1 (MLPPolicy) | MLP struggles with visual input, poor spatial understanding | 0.67 | 490.84s |
-| lr=0.0001, gamma=0.99, batch_size=32, epsilon_start=1.0, epsilon_end=0.01, epsilon_decay=0.1 (CNNPolicy) | CNN baseline with optimal exploration schedule | 0.67 | 542.24s |
-| lr=0.00025, gamma=0.99, batch_size=32, epsilon_start=1.0, epsilon_end=0.01, epsilon_decay=0.1 (CNNPolicy) | Higher LR for faster convergence with CNN architecture | 0.0 | 1445.97s |
-| lr=0.0001, gamma=0.995, batch_size=64, epsilon_start=1.0, epsilon_end=0.01, epsilon_decay=0.2 (CNNPolicy) | Higher gamma + larger batch for long-term reward optimization | 0.0 | 1128.69s |
+| Hyperparameter Set                                                                 | Noted Behavior                                                   | Avg Reward | Training Time |
+|------------------------------------------------------------------------------------|------------------------------------------------------------------|------------|----------------|
+| lr=0.0001, gamma=0.99, batch_size=32, epsilon_start=1.0, epsilon_end=0.01, epsilon_decay=0.1 (MLPPolicy)  | MLP struggles with visual input, poor spatial understanding       | 1.05       | ~3263.6s       |
+| lr=0.0001, gamma=0.99, batch_size=32, epsilon_start=1.0, epsilon_end=0.01, epsilon_decay=0.1 (CNNPolicy)  | CNN baseline with optimal exploration schedule                    | 1.70       | ~3263.6s       |
+| lr=0.00025, gamma=0.99, batch_size=32, epsilon_start=1.0, epsilon_end=0.01, epsilon_decay=0.1 (CNNPolicy) | Higher LR for faster convergence with CNN architecture            | 2.10       | ~3263.6s       |
+| lr=0.0001, gamma=0.995, batch_size=64, epsilon_start=1.0, epsilon_end=0.01, epsilon_decay=0.2 (CNNPolicy) | Higher gamma + larger batch for long-term reward optimization     | 1.35       | ~3263.6s       |
+
 
 ## Results Analysis
 
@@ -96,14 +97,27 @@ Based on actual results:
 - **Best Model**: Saved as `dqn_model.zip` (Config 1 or 2)
 
 ## Video Demonstration
-*Video showing the trained agent playing Breakout should be recorded and included here*
+[[Video showing the trained agent playing Breakout](https://drive.google.com/file/d/1grnGlZfJy7i4geigkSCd1QRdwedspxIg/view?usp=sharing)]
 
 ## Play.py Test Results
 ```
-Episode 1 completed: Reward = 0.0, Steps = 5
-Episode 2 completed: Reward = 2.0, Steps = 21  
-Episode 3 completed: Reward = 0.0, Steps = 5
-Average reward: 0.67
+Episode 1 completed: Reward = 2.0, Steps = 24
+Episode 2 completed: Reward = 1.0, Steps = 12
+Episode 3 completed: Reward = 2.0, Steps = 23
+Episode 4 completed: Reward = 3.0, Steps = 41
+Episode 5 completed: Reward = 1.0, Steps = 17
+Episode 6 completed: Reward = 4.0, Steps = 41
+Episode 7 completed: Reward = 3.0, Steps = 33
+Episode 8 completed: Reward = 3.0, Steps = 36
+Episode 9 completed: Reward = 3.0, Steps = 33
+Episode 10 completed: Reward = 2.0, Steps = 24
+Episode 11 completed: Reward = 7.0, Steps = 64
+Episode 12 completed: Reward = 3.0, Steps = 36
+Episode 13 completed: Reward = 1.0, Steps = 17
+Episode 14 completed: Reward = 3.0, Steps = 43
+Episode 15 completed: Reward = 2.0, Steps = 25
+
+Average reward: 2.80
 ```
 Agent successfully learned basic gameplay - Episode 2 shows ball contact and scoring.
 
@@ -123,6 +137,6 @@ Agent successfully learned basic gameplay - Episode 2 shows ball contact and sco
 - `README.md` - This documentation
 
 ## Group Memebers
-1.
+1. John Deng Madit Akech
 2. Eliane Munezero
-3.
+3. Kuir Juach Thuch
