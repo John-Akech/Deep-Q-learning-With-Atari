@@ -119,11 +119,11 @@ Episode 15 completed: Reward = 2.0, Steps = 25
 
 Average reward: 2.80
 ```
-Agent successfully learned basic gameplay - Episode 2 shows ball contact and scoring.
+The agent successfully learned basic gameplay - Episode 2 demonstrates ball contact and scoring.
 
 ## Key Findings
 1. **Conservative hyperparameters** outperformed aggressive tuning in this experiment
-2. **Both MLP and CNN** achieved similar performance (0.67 reward) but CNN is architecturally better
+2. **Both MLP and CNN** achieved similar performance (0.67 reward), but CNN is architecturally better
 3. **Higher learning rates and gamma** led to training instability
 4. **Agent successfully learned** basic Breakout gameplay (ball contact, scoring)
 5. **Training time varies** significantly based on hyperparameter complexity
@@ -136,7 +136,7 @@ Agent successfully learned basic gameplay - Episode 2 shows ball contact and sco
 - `requirements.txt` - Dependencies
 - `README.md` - This documentation
 
-## Group Memebers
-1. John Deng Madit Akech
+## Group Members
+1. John Deng Madit 
 2. Eliane Munezero
 3. Kuir Juach Thuch
