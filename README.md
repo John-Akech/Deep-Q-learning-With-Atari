@@ -136,7 +136,26 @@ Agent successfully learned basic gameplay - Episode 2 shows ball contact and sco
 - `requirements.txt` - Dependencies
 - `README.md` - This documentation
 
-## Group Memebers
+## Group Members
 1. John Deng Madit Akech
 2. Eliane Munezero
 3. Kuir Juach Thuch
+
+## Team Contributions
+
+### John Akech
+- Set up the Atari environment and wrappers
+- Implemented the DQN training script (train.py)
+- Developed the play.py script for model evaluation
+- Assisted with hyperparameter analysis
+
+
+### Eliane Munezero
+- Conducted hyperparameter tuning experiments
+- Analyzed results and documented findings
+- Created the project documentation and README
+
+
+### Kuir Juach Thuch
+- Performed model evaluation and testing
+- Created visualizations and result analysis
