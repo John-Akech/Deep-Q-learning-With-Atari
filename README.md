@@ -53,36 +53,36 @@ The following hyperparameter configurations were tested, comparing MLPPolicy vs 
 ### Hyperparameter Impact Analysis
 
 **Learning Rate Impact:**
-- **0.0001**: Stable learning for both MLP and CNN (0.67 reward)
-- **0.00025**: Higher LR caused instability, leading to poor performance (0.0 reward)
-- **Conclusion**: Conservative learning rates work better for Atari environments
+- **0.0001**: Stable learning for both MLP and CNN (1.05-1.70 reward)
+- **0.00025**: Higher LR improved performance with CNN architecture (2.10 reward)
+- **Conclusion**: Higher learning rates can benefit CNN architectures for Atari environments
 
 **Policy Comparison:**
-- **MLPPolicy**: Achieved 0.67 reward but struggles with spatial visual patterns
-- **CNNPolicy**: Same performance (0.67) but better suited for visual processing
-- **Conclusion**: CNN architecture is essential for Atari games despite similar initial results
+- **MLPPolicy**: Achieved 1.05 reward but struggles with spatial visual patterns
+- **CNNPolicy**: Better performance (1.70) and better suited for visual processing
+- **Conclusion**: CNN architecture is essential for Atari games due to superior visual pattern recognition
 
 **Gamma and Batch Size:**
-- **Higher gamma (0.995)**: Led to training instability (0.0 reward)
-- **Larger batch size (64)**: Combined with high gamma caused poor performance
-- **Conclusion**: Standard values (gamma=0.99, batch=32) provide better stability
+- **Higher gamma (0.995)**: Combined with larger batch size achieved 1.35 reward
+- **Larger batch size (64)**: Showed moderate performance with high gamma
+- **Conclusion**: Standard values (gamma=0.99, batch=32) provide better stability and performance
 
 ### Best Configuration
 Based on actual results:
-- **Policy**: Both MLP and CNN achieved 0.67 reward, but CNN is architecturally superior
-- **Learning Rate**: 0.0001 (stable performance)
+- **Policy**: CNN significantly outperformed MLP (2.10 vs 1.05 reward)
+- **Learning Rate**: 0.00025 (best performance with CNN)
 - **Gamma**: 0.99 (better than 0.995)
-- **Batch Size**: 32 (more stable than 64)
-- **Key Finding**: Conservative hyperparameters outperformed aggressive tuning
+- **Batch Size**: 32 (more effective than 64)
+- **Key Finding**: CNN with slightly higher learning rate provided the best performance
 
 ## Technical Implementation
 
 ### Training Details
 - **Environment**: ALE/Breakout-v5 with AtariWrapper preprocessing
-- **Training Steps**: 25,000 timesteps per configuration (~10 minute runtime)
+- **Training Steps**: 100,000 timesteps per configuration (~30 minute runtime)
 - **Buffer Size**: 20,000 experiences
 - **Learning Starts**: 1,000 timesteps (initial exploration)
-- **Evaluation**: 3 episodes with deterministic policy (up to 1,000 steps each)
+- **Evaluation**: 20 episodes with deterministic policy (up to 1,000 steps each)
 
 ### Play Script Features
 - Loads best trained model (`dqn_model.zip`)
@@ -91,10 +91,10 @@ Based on actual results:
 - Runs multiple episodes with performance statistics
 
 ## Actual Performance Results
-- **MLPPolicy**: 0.67 average reward (8.2 minutes training)
-- **CNNPolicy**: 0.67 average reward (9.0 minutes training)
-- **Total Training Time**: ~60 minutes for all configurations
-- **Best Model**: Saved as `dqn_model.zip` (Config 1 or 2)
+- **MLPPolicy**: 1.05 average reward (~17 minutes training)
+- **CNNPolicy**: 1.70-2.10 average reward (~52-57 minutes training)
+- **Total Training Time**: ~3-4 hours for all configurations
+- **Best Model**: Saved as `dqn_model.zip` (Config 3 - CNN with lr=0.00025)
 
 ## Video Demonstration
 [[Video showing the trained agent playing Breakout](https://drive.google.com/file/d/1grnGlZfJy7i4geigkSCd1QRdwedspxIg/view?usp=sharing)]
@@ -119,12 +119,12 @@ Episode 15 completed: Reward = 2.0, Steps = 25
 
 Average reward: 2.80
 ```
-Agent successfully learned basic gameplay - Episode 2 shows ball contact and scoring.
+The agent successfully learned basic gameplay - Episode 2 demonstrates ball contact and scoring.
 
 ## Key Findings
-1. **Conservative hyperparameters** outperformed aggressive tuning in this experiment
-2. **Both MLP and CNN** achieved similar performance (0.67 reward) but CNN is architecturally better
-3. **Higher learning rates and gamma** led to training instability
+1. **CNN architecture** significantly outperformed MLP for visual game tasks
+2. **Moderately higher learning rate (0.00025)** with CNN achieved best performance (2.10 reward)
+3. **Standard gamma (0.99)** provided better stability than higher values
 4. **Agent successfully learned** basic Breakout gameplay (ball contact, scoring)
 5. **Training time varies** significantly based on hyperparameter complexity
 
@@ -137,7 +137,8 @@ Agent successfully learned basic gameplay - Episode 2 shows ball contact and sco
 - `README.md` - This documentation
 
 ## Group Members
-1. John Deng Madit Akech
+
+1. John Akech 
 2. Eliane Munezero
 3. Kuir Juach Thuch
 
