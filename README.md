@@ -157,6 +157,7 @@ The agent successfully learned basic gameplay - Episode 2 demonstrates ball cont
 - Created the project documentation and README
 
 ### Kuir Juach Thuch
+- Assisted with hyperparameter tuning and analysis
 - Performed model evaluation and testing
 - Analyzed performance results
 - Recorded video demonstration
