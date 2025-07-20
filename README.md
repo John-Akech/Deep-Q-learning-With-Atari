@@ -150,13 +150,13 @@ The agent successfully learned basic gameplay - Episode 2 demonstrates ball cont
 - Developed the play.py script for model evaluation
 - Assisted with hyperparameter analysis
 
-
 ### Eliane Munezero
 - Conducted hyperparameter tuning experiments
+- Retrained the model with optimized parameters
 - Analyzed results and documented findings
 - Created the project documentation and README
 
-
 ### Kuir Juach Thuch
 - Performed model evaluation and testing
-- Created visualizations and result analysis
+- Analyzed performance results
+- Recorded video demonstration
